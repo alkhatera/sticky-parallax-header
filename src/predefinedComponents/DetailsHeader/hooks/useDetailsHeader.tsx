@@ -49,7 +49,7 @@ export function useDetailsHeader<T extends ScrollComponent>(props: DetailsHeader
     return {
       opacity: interpolate(scrollValue.value, headerTitleInputRange, [0, 0, 1], Extrapolate.CLAMP),
     };
-  });
+  }, [scrollValue, headerTitleInputRange]);
 
   const renderHeader = React.useCallback(() => {
     return (
